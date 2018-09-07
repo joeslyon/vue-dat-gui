@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>webpacktest</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+  <script src="./dist/vuedatgui.js"></script>
+  <script type='x-template' id='demo'>
+  <div>
+  <h1>{{stringTxt}}</h1>
+  <table>
+    <tr>
+      <th>label</th>
+      <th>value</th>
+    </tr>
+    <tr>
+      <td>button</td>
+      <td><input type="text" v-model="consoleTxt" /></td>
+    </tr>
+    <tr>
+      <td>string</td>
+      <td><input type="text" v-model="stringTxt" /></td>
+    </tr>
+    <tr>
+      <td>number</td>
+      <td><input type="number" inputmode="number" :max="max" :min="min" :step="step" v-model="num" /></td>
+    </tr>
+    <tr>
+      <td>color1</td>
+      <td><input type="text" :value="color1" /></td>
+    </tr>
+    <tr>
+      <td>color2</td>
+      <td><input type="text" :value="color2" /></td>
+    </tr>
+    <tr>
+      <td>color3</td>
+      <td><input type="text" :value="color3" /></td>
+    </tr>
+    <tr>
+      <td>color4</td>
+      <td><input type="text" :value="color4String" /></td>
+    </tr>
+    <tr>
+      <td>checkbox</td>
+      <td><input type="checkbox" v-model="show" /></td>
+    </tr>
+    <tr>
+      <td>select</td>
+      <td>
+        <select v-model="selected">
+          <option v-for="(val,index) in items" :key="index" :value="val">{{val}}</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <dat-gui closeText="OpenControl" openText="Close">
+    <dat-button @click="func">button</dat-button>
+    <dat-string v-model="stringTxt">string</dat-string>
+    <dat-number :max="max" :min="min" :step="step" v-model="num">number</dat-number>
+    <dat-folder title="color-folder">
+      <dat-color v-model="color1">color test</dat-color>
+      <dat-color v-model="color2">color test</dat-color>
+      <dat-color v-model="color3">color test</dat-color>
+      <dat-color v-model="color4">color test</dat-color>
+    </dat-folder>
+    <dat-folder title="another-folder" closed>
+      <dat-boolean v-model="show">checkbox test2</dat-boolean>
+      <dat-select v-model="selected" :items="items">list</dat-select>
+      <dat-folder title="child-folder">
+        <dat-button @click="func">button</dat-button>
+        <dat-string v-model="stringTxt">string</dat-string>
+        <dat-number :max="max" :min="min" :step="step" v-model="num">number</dat-number>
+      </dat-folder>
+    </dat-folder>
+    <dat-boolean v-model="show">checkbox test2</dat-boolean>
+    <dat-select v-model="selected" :items="items">list</dat-select>
+  </dat-gui>
+  </div>
+</script>
+
+  <script>
+
+    let vm = new Vue({
+      el: '#app',
+      template: '#demo',
+      data() {
+        return {
+          stringTxt: "teset001",
+          show: true,
+          num: 12,
+          max: 15,
+          min: 1,
+          step: 3,
+          color1: "#ffc",
+          color2: "rgb(123,123,216)",
+          color3: [0, 128, 255, 0.3],
+          color4: { h: 350, s: 0.9, v: 0.3 },
+          selected: "2333333",
+          items: ["1", "2", "2333333", "1433223"],
+          consoleTxt: "clicked"
+        };
+      },
+      computed: {
+        color4String() {
+          return JSON.stringify(this.color4);
+        }
+      },
+      methods: {
+        func() {
+          console.log(this.consoleTxt);
+        }
+      }
+    })
+
+  </script>
+</body>
+
+</html>
