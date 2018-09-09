@@ -4,6 +4,47 @@
 <head>
   <meta charset="utf-8">
   <title>vue-dat-gui</title>
+  <style>
+    h1 {
+      text-align: center;
+      border:1px solid white;
+    }
+
+    table {
+      margin: auto;
+      width: 50%;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #cad9ea;
+      color: #666;
+      height: 30px;
+    }
+
+    table thead th {
+      background-color: #CCE8EB;
+      width: 100px;
+    }
+
+    table tr:nth-child(odd) {
+      background: #fff;
+    }
+
+    table tr:nth-child(even) {
+      background: #F5FAFA;
+    }
+
+    .upperCase{
+      text-transform:uppercase;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,7 +53,7 @@
   <script src="./dist/vuedatgui.js"></script>
   <script type='x-template' id='demo'>
   <div>
-  <h1>{{stringTxt}}</h1>
+  <h1 :class="{'upperCase':show}" :style="{color:color1,'background-color':color2,'margin':num+'px'}">{{stringTxt}}</h1>
   <table>
     <tr>
       <th>label</th>
@@ -90,13 +131,13 @@
       template: '#demo',
       data() {
         return {
-          stringTxt: "teset001",
+          stringTxt: "vue-dat-gui",
           show: true,
           num: 12,
           max: 15,
           min: 1,
           step: 3,
-          color1: "#ffc",
+          color1: "#ff0",
           color2: "rgb(123,123,216)",
           color3: [0, 128, 255, 0.3],
           color4: { h: 350, s: 0.9, v: 0.3 },
@@ -112,7 +153,7 @@
       },
       methods: {
         func() {
-          console.log(this.consoleTxt);
+          alert(this.consoleTxt);
         }
       }
     })

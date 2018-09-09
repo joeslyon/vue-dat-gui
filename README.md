@@ -17,6 +17,8 @@ npm run build
 
 ## Usage
 
+> refer to *index.html*
+
 ``` html
 <dat-gui closeText="OpenControl" openText="Close">
     <dat-button @click="func">button1</dat-button>
@@ -40,6 +42,40 @@ npm run build
     <dat-boolean v-model="show">checkbox test2</dat-boolean>
     <dat-select v-model="selected" :items="items">list3</dat-select>
 </dat-gui>
+```
+
+``` js
+    let vm = new Vue({
+      el: '#app',
+      template: '#demo',
+      data() {
+        return {
+          stringTxt: "vue-dat-gui",
+          show: true,
+          num: 12,
+          max: 15,
+          min: 1,
+          step: 3,
+          color1: "#ff0",
+          color2: "rgb(123,123,216)",
+          color3: [0, 128, 255, 0.3],
+          color4: { h: 350, s: 0.9, v: 0.3 },
+          selected: "2333333",
+          items: ["1", "2", "2333333", "1433223"],
+          consoleTxt: "clicked"
+        };
+      },
+      computed: {
+        color4String() {
+          return JSON.stringify(this.color4);
+        }
+      },
+      methods: {
+        func() {
+          alert(this.consoleTxt);
+        }
+      }
+    })
 ```
 
 
