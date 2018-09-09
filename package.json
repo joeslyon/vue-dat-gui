@@ -1,10 +1,10 @@
 {
   "name": "vue-dat-gui",
   "description": "Vuejs dat.gui",
-  "version": "1.0.0",
+  "version": "0.5.1",
   "author": "zouliang <iamzouliang@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "main":"src/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
