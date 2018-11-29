@@ -20,7 +20,7 @@ npm run build
 > refer to *index.html*
 
 ``` html
-<dat-gui closeText="OpenControl" openText="Close">
+<dat-gui closeText="Close" openText="OpenControl">
     <dat-button @click="func">button1</dat-button>
     <dat-string v-model="stringTxt">string</dat-string>
     <dat-number :max="max" :min="min" :step="step" v-model="num">number</dat-number>
