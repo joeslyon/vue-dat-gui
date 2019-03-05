@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import common from "@/utils/common";
-import dom from "@/utils/dom";
+import common from "../../utils/common";
+import dom from "../../utils/dom";
 
 export default {
   name: "Slider",
@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/assets/base.scss";
+@import "~../../assets/base.scss";
 
 .vue-dat-gui .slider {
   display: block;

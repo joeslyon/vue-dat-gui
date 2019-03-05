@@ -1,4 +1,4 @@
-import $__dom from "@/utils/dom";
+import $__dom from "../utils/dom";
 
 export default {
   data() {
