@@ -14,7 +14,7 @@
 <script>
 import liMixin from "../mixin.js";
 import Slider from "./slider";
-import common from "@/utils/common";
+import common from "../../utils/common";
 
 export default {
   name: "DatNumber",
@@ -146,7 +146,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/assets/base.scss";
+@import "~../../assets/base.scss";
 
 .vue-dat-gui .cr.number {
   border-left: $border-left-size solid $number-color;

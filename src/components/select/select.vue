@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/assets/base.scss";
+@import "~../../assets/base.scss";
 
 .vue-dat-gui .cr.select {
   border-left: $border-left-size solid $select-color;

@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/assets/base.scss";
+@import "~../../assets/base.scss";
 
 .vue-dat-gui .cr.button {
   border-left: $border-left-size solid $button-color;

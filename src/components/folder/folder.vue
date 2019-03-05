@@ -11,7 +11,7 @@
 
 <script>
 import liMixin from "../mixin.js";
-import dom from "@/utils/dom";
+import dom from "../../utils/dom";
 
 export default {
   name: "DatFolder",
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/assets/base.scss";
+@import "~../../assets/base.scss";
 
 .vue-dat-gui li.folder {
   display: block;

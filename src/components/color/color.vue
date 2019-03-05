@@ -24,8 +24,8 @@
 import liMixin from "../mixin.js";
 import Color from "./lib/Color";
 import interpret from "./lib/interpret";
-import common from "@/utils/common";
-import dom from "@/utils/dom";
+import common from "../../utils/common";
+import dom from "../../utils/dom";
 
 const vendors = ["-moz-", "-o-", "-webkit-", "-ms-", ""];
 
@@ -263,7 +263,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~@/assets/base.scss";
+@import "~../../assets/base.scss";
 
 .vue-dat-gui .cr.color {
   border-left: $border-left-size solid $background-color;

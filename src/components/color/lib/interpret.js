@@ -12,7 +12,7 @@
  */
 
 import toString from './toString';
-import common from '@/utils/common';
+import common from '../../../utils/common';
 
 const INTERPRETATIONS = [
   // Strings

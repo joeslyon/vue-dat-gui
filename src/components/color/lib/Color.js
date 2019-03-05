@@ -14,7 +14,7 @@
 import interpret from './interpret';
 import math from './math';
 import colorToString from './toString';
-import common from '@/utils/common';
+import common from '../../../utils/common';
 
 class Color {
   constructor() {
