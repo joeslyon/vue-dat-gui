@@ -6,7 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vuedatgui.js'
+    filename: 'vuedatgui.js',
+    libraryTarget: 'umd',
+    library: 'vuedatgui',
+    umdNamedDefine: true
   },
   module: {
     rules: [
